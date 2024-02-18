@@ -40,7 +40,7 @@ To use the application, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [MIT](MIT) file for details.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -64,5 +64,5 @@ To run tests, follow these steps:
 
 For any questions or feedback, feel free to contact me:
 
-- GitHub: [YourGitHubUsername](https://github.com/YourGitHubUsername)
-- Email: your.email@example.com
+- GitHub: [aysegul Ozen](https://github.com/Aysegulozen/)
+- Email: aysegul.bu@hotmail.com
