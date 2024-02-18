@@ -7,62 +7,51 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
 
     {
-
-        type: "input",
-        name: "title",
-        message: "What is the title of your project?"
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'title',
     },
     {
-        type: "input",
-        name: "projectName",
-        message: "What is the name of your project?"
+        type: 'input',
+        message: 'Please provide a description of your project.',
+        name: 'description',
     },
     {
-        type: "input",
-        name: "description",
-        message: "Please provide a description of your project."
+        type: 'input',
+        message: 'What are the installation instructions for your project?',
+        name: 'installation',
     },
     {
-        type: "input",
-        name: "installation",
-        message: "Please provide installation instructions."
+        type: 'input',
+        message: 'What are the usage instructions for your project?',
+        name: 'usage',
     },
     {
-        type: "input",
-        name: "usage",
-        message: "Please provide usage information."
+        type: 'input',
+        message: 'What are the contribution guidelines for your project?',
+        name: 'contributing',
     },
     {
-        type: "input",
-        name: "license",
-        message: "Please provide license information."
+        type: 'input',
+        message: 'What are the test instructions for your project?',
+        name: 'tests',
     },
     {
-        type: "input",
-        name: "contributing",
-        message: "Please provide contribution guidelines."
+        type: 'list',
+        message: 'What license would you like to use?',
+        name: 'license',
+        choices: ['MIT', 'GNU GPLv3', 'Apache 2.0', 'ISC', 'None'],
     },
     {
-        type: "input",
-        name: "tests",
-        message: "Please provide test instructions."
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'github',
     },
     {
-        type: "input",
-        name: "questions",
-        message: "Please provide contact information for questions."
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email',
     },
-    {
-        type: "input",
-        name: "github",
-        message: "Please provide your GitHub username."
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "Please provide your email address."
-    
-    }
 
 
 ];
@@ -70,9 +59,22 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+    try {
+        // Create dist folder if not exists
+        const distFolder = path.join(process.cwd(), 'dist');
+        if (!fs.existsSync(distFolder)) {
+            fs.mkdirSync(distFolder);
+        }
 
+        // Write README.md to dist folder
+        const filePath = path.join(distFolder, fileName);
+        fs.writeFileSync(filePath, data);
+        console.log(`File "${distFolder}" created successfully in the "dist" folder!`);
+    } catch (error) {
+        console.error('Error occurred while writing to file:', error.message);
+    }
 }
+
 
 // function to initialize program
 function init() {

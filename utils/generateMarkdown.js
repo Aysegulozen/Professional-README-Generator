@@ -1,44 +1,39 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  [![License](https://img.shields.io/badge/license-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 
-  ### ${data.projectName}
+## Description
+${data.description}
 
-  ## Description
-  ${data.description}
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+## Installation
+${data.installation}
 
-  ## Installation
-  ${data.installation}
+## Usage
+${data.usage}
 
-  ## Usage
-  ${data.usage}
+## Contributing
+${data.contributing}
 
-  ## License
-  ${data.license}
+## Tests
+${data.tests}
 
-  ## Contributing
-  ${data.contributing}
+## License
+This project is licensed under the ${data.license} License.
 
-  ## Tests
-  ${data.tests}
 
-  ## Questions
-  ${data.questions}
-
-  ## GitHub Username
-  ${data.github}
-
-  ## Email
-  ${data.email}
-
+## Questions
+For any questions or feedback, feel free to contact me:
+- GitHub: [${data.github}](https://github.com/${data.github})
+- Email: ${data.email}
 `;
 }
 
