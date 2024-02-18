@@ -4,6 +4,9 @@
 
 The Professional README Generator is a command-line application that dynamically generates a professional README.md file based on user input. This application uses the Inquirer package to prompt the user with a series of questions about their project. The user's responses are then used to generate a README file with sections such as Description, Installation, Usage, Contributing, Tests, License, and Questions.
 
+# GitHub Repo:
+[github](https://github.com/Aysegulozen/Professional-README-Generator)
+
 ## Table of Contents
 
 - [Installation](#installation)
